@@ -12,6 +12,5 @@ export const ZInterview = z.object({
     return val;
   }, z.number()),
   userid: z.string(),
-  questions: z.array(z.string()).nonempty(),
   techstack: z.string(),
 });

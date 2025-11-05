@@ -13,6 +13,7 @@ export async function GET() {
 export async function POST(request: Request) {
   const validateFields = ZInterview.safeParse(await request.json());
   if (!validateFields.success) {
+    console.log(validateFields.error);
     return Response.json(
       { success: false, error: "Invalid data" },
       { status: 400 }
